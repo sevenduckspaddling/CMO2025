@@ -1,9 +1,6 @@
 Class {
 	#name : 'Interrupteur',
 	#superclass : 'Composant',
-	#instVars : [
-		'etat'
-	],
 	#category : 'Projet2025',
 	#package : 'Projet2025'
 }
@@ -12,4 +9,9 @@ Class {
 Interrupteur >> description [
 	
 	^self class name ,',   id : ', self id printString .
+]
+
+{ #category : 'accessing' }
+Interrupteur >> etat [ 
+	^self
 ]
