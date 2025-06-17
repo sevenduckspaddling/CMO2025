@@ -7,7 +7,6 @@ Class {
 
 { #category : 'accessing' }
 Interrupteur >> description [
-	
 	^self class name ,',   id : ', self id printString .
 ]
 

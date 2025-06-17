@@ -7,6 +7,5 @@ Class {
 
 { #category : 'accessing' }
 Porte >> description [
-	
 	^self class name ,',   id : ', self id printString .
 ]

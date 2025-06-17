@@ -11,10 +11,7 @@ Class {
 
 { #category : 'accessing' }
 Vanne >> description [
-    ^ super description, ' in: ', 
-        (in isNil 
-            ifTrue: [ 'non connecté' ]
-            ifFalse: [ in description ])
+    ^self class name, ' (', self id asString, ') in: ', in description
 ]
 
 { #category : 'operations' }

@@ -11,14 +11,8 @@ Class {
 
 { #category : 'accessing' }
 Porte2Entrees >> description [
-    ^ super description, ' in1: ', 
-        (in1 isNil 
-            ifTrue: [ 'non connecté' ]
-            ifFalse: [ in1 description ]), 
-        ' in2: ', 
-        (in2 isNil 
-            ifTrue: [ 'non connecté' ]
-            ifFalse: [ in2 description ])
+    ^ self class name, ' (', self id asString, ') in1: ', in1 description, ' in2: ', in2 description
+
 ]
 
 { #category : 'operations' }

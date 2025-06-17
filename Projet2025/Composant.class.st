@@ -6,8 +6,8 @@ Class {
 }
 
 { #category : 'operations' }
-Composant >> etat [
-	^self subclassResponsibility 
+Composant >> description [
+    ^ self class name, ' (', self id asString, ')'
 ]
 
 { #category : 'checking' }

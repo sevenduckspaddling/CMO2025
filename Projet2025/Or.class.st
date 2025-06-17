@@ -10,6 +10,5 @@ Class {
 
 { #category : 'accessing' }
 Or >> description [
-	
-	^self class name ,',   id : ', self id printString .
+	^super description 
 ]
