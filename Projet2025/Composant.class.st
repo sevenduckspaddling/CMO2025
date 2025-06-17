@@ -11,6 +11,16 @@ Composant >> description [
 ]
 
 { #category : 'checking' }
+Composant >> estInterrupteur [
+	^false
+]
+
+{ #category : 'checking' }
+Composant >> estVanne [
+	^false
+]
+
+{ #category : 'checking' }
 Composant >> etatCheck [
     ^ [ self etat ] on: Error do: [ :e | 'Le composant n est pas connecte.' ]
 ]

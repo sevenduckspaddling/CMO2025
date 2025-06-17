@@ -13,6 +13,11 @@ Interrupteur >> description [
 	^self class name ,',   id : ', self id printString .
 ]
 
+{ #category : 'checking' }
+Interrupteur >> estInterrupteur [ 
+	^true
+]
+
 { #category : 'accessing' }
 Interrupteur >> etat [ 
 	^self

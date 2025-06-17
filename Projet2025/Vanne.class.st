@@ -15,6 +15,11 @@ Vanne >> description [
     ^self class name, ' (', self id asString, ') in: ', in description
 ]
 
+{ #category : 'checking' }
+Vanne >> estVanne [ 
+	^true 
+]
+
 { #category : 'operations' }
 Vanne >> etat [
     ^ in etat

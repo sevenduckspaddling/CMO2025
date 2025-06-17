@@ -30,6 +30,23 @@ Circuittest >> setUp [
 ]
 
 { #category : 'tests' }
+Circuittest >> testCircuitContientBienInterrupteursEtVannes [
+    | not and circuit |
+    i1 := Interrupteur new.
+    i2 := Interrupteur new.
+    van := Vanne new.
+    not := Not new.
+    and := And new.
+    not in: i1.
+    and in1: i2; in2: not.
+    van in: and.
+    circuit := Circuit nom: 'TestCircuit' composants: {i1. i2. van. not. and}.
+    self assert: circuit entrees printString equals: 'a SortedCollection(an Interrupteur an Interrupteur)'.
+    self assert: circuit sorties printString equals: 'a SortedCollection(a Vanne)'.
+
+]
+
+{ #category : 'tests' }
 Circuittest >> testCircuiti1ONi2ONi3OFF [ 
 	|var|
 	i1 on.
