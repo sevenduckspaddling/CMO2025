@@ -3,7 +3,8 @@ Class {
 	#superclass : 'Porte',
 	#instVars : [
 		'in',
-		'etat'
+		'etat',
+		'state'
 	],
 	#category : 'Projet2025',
 	#package : 'Projet2025'
@@ -29,4 +30,9 @@ Not >> in [
 Not >> in: aComposant [
 	in := aComposant
 	
+]
+
+{ #category : 'operations' }
+Not >> state [ 
+	^ (in state) not
 ]

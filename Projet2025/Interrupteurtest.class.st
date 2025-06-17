@@ -6,14 +6,6 @@ Class {
 }
 
 { #category : 'tests' }
-Interrupteurtest >> idtest [
-	|int1|
-	int1 := Interrupteur new.
-	self assert: int1 id.
-	
-]
-
-{ #category : 'tests' }
 Interrupteurtest >> testDescription [
 	|int1 var var2 var3|
 	int1 := Interrupteur new.
@@ -29,5 +21,24 @@ Interrupteurtest >> testId [
 	int1 := Interrupteur new.
 	var := int1 id.
 	self assert: int1 id equals: var.
+	
+]
+
+{ #category : 'tests' }
+Interrupteurtest >> testOff [ 
+	|int1 var|
+	int1 := Interrupteur new. 
+	int1 off. 
+	var := int1 state.
+	self assert: var equals: false
+]
+
+{ #category : 'tests' }
+Interrupteurtest >> testOn [
+	|int1 var|
+	int1 := Interrupteur new. 
+	int1 on. 
+	var := int1 state.
+	self assert: var equals: true
 	
 ]

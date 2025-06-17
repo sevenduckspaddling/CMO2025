@@ -12,3 +12,8 @@ Class {
 And >> description [
 	^super description 
 ]
+
+{ #category : 'accessing' }
+And >> state [
+    ^ (in1 state) and: (in2 state)
+]

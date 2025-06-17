@@ -1,6 +1,6 @@
 Class {
 	#name : 'Composanttest',
-	#superclass : 'TestCase',
+	#superclass : 'Circuittest',
 	#category : 'Projet2025',
 	#package : 'Projet2025'
 }

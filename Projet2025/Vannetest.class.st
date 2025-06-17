@@ -24,3 +24,15 @@ van1 in: Interrupteur new.
 var := van1 etat.
 self assert: var printString equals: 'an Interrupteur'.
 ]
+
+{ #category : 'tests' }
+Vannetest >> testvannestate [ 
+	|i1 van1 var|
+	i1 := Interrupteur new.
+
+	van1 := Vanne new.
+	van1 in: i1.
+	i1 on. 
+	var := van1 state.
+	self assert: var equals: true
+]

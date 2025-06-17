@@ -12,3 +12,8 @@ Class {
 Or >> description [
 	^super description 
 ]
+
+{ #category : 'accessing' }
+Or >> state [
+    ^ (in1 state) or: (in2 state)
+]
