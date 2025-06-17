@@ -13,6 +13,12 @@ And >> description [
 	^super description 
 ]
 
+{ #category : 'evaluating' }
+And >> evaluate [
+    ^(in1 evaluate) and: (in2 evaluate)
+
+]
+
 { #category : 'accessing' }
 And >> state [
     ^ (in1 state) and: (in2 state)

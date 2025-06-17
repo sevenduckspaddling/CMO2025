@@ -30,6 +30,20 @@ Circuit >> entrees [
 
 ]
 
+{ #category : 'evaluating' }
+Circuit >> evaluate [
+    | signal |
+    signal := sorties first evaluate.
+    Transcript
+        show: 'Vanne ';
+        show: sorties first id;
+        show: ' → ';
+        show: signal value asString;
+        cr.
+    ^ signal
+
+]
+
 { #category : 'initialization' }
 Circuit >> initializeNom: aNom composants: uneCollection [
     nom := aNom.

@@ -21,6 +21,12 @@ Not >> etat [
 	^in etat
 ]
 
+{ #category : 'evaluating' }
+Not >> evaluate [
+    ^in evaluate not
+
+]
+
 { #category : 'operations' }
 Not >> in [ 
 	^in

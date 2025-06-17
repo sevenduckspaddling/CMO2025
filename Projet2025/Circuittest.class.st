@@ -65,3 +65,43 @@ Circuittest >> testCircuiti1ONi2ONi3ON [
 	var := van state.
 	self assert: var equals: false
 ]
+
+{ #category : 'compatibility tests' }
+Circuittest >> testEvaluationCircuitLogique [
+    | not and vanne circuit signal |
+    
+    i1 := Interrupteur new on.
+    i2 := Interrupteur new off.
+
+    not := Not new.
+    not in: i1.
+
+    and := And new.
+    and in1: i2; in2: not.
+
+    vanne := Vanne new.
+    vanne in: and.
+
+    circuit := Circuit nom: 'CircuitTest' composants: { i1. i2. not. and. vanne }.
+
+    signal := circuit evaluate.
+    self assert: signal value equals: false.
+
+
+
+]
+
+{ #category : 'compatibility tests' }
+Circuittest >> testLibrairieSignaux [
+    | haut bas |
+    haut := SignalHaut new.
+    bas := SignalBas new.
+
+    self assert: haut value equals: true.
+    self assert: bas value equals: false.
+    self assert: (haut not value) equals: false.
+    self assert: (bas not value) equals: true.
+    self assert: ((haut and: haut) value) equals: true.
+    self assert: ((haut and: bas) value) equals: false.
+    self assert: ((bas or: haut) value) equals: true.
+]

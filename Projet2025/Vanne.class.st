@@ -25,6 +25,12 @@ Vanne >> etat [
     ^ in etat
 ]
 
+{ #category : 'evaluating' }
+Vanne >> evaluate [
+    ^in evaluate
+
+]
+
 { #category : 'accessing' }
 Vanne >> in [ 
 	^in
