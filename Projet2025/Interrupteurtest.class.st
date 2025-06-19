@@ -29,7 +29,7 @@ Interrupteurtest >> testOff [
 	|int1 var|
 	int1 := Interrupteur new. 
 	int1 off. 
-	var := int1 state.
+	var := int1 etat value.
 	self assert: var equals: false
 ]
 
@@ -38,7 +38,7 @@ Interrupteurtest >> testOn [
 	|int1 var|
 	int1 := Interrupteur new. 
 	int1 on. 
-	var := int1 state.
+	var := int1 etat value.
 	self assert: var equals: true
 	
 ]

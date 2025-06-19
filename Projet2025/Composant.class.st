@@ -22,7 +22,7 @@ Composant >> estVanne [
 
 { #category : 'checking' }
 Composant >> etatCheck [
-    ^ [ self etat ] on: Error do: [ :e | 'Le composant n est pas connecte.' ]
+    ^ [ self etat value] on: Error do: [ :e | 'Le composant n est pas connecte.' ]
 ]
 
 { #category : 'operations' }

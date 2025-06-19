@@ -53,7 +53,7 @@ Circuittest >> testCircuiti1ONi2ONi3OFF [
 	i2 on.
 	i3 off. 
 	var := van etat.
-	self assert: var equals: true
+	self assert: var value equals: true
 ]
 
 { #category : 'tests' }
@@ -63,7 +63,7 @@ Circuittest >> testCircuiti1ONi2ONi3ON [
 	i2 on.
 	i3 on. 
 	var := van etat.
-	self assert: var equals: false
+	self assert: var value equals: false
 ]
 
 { #category : 'compatibility tests' }
@@ -85,7 +85,7 @@ Circuittest >> testEvaluationCircuitLogique [
     circuit := Circuit nom: 'CircuitTest' composants: { i1. i2. not. and. vanne }.
 
     signal := circuit evaluate.
-    self assert: signal value equals: false.
+    self assert: signal value printString equals:  'false'
 
 
 

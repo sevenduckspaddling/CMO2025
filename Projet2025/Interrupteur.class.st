@@ -25,7 +25,7 @@ Interrupteur >> etat [
 
 { #category : 'evaluating' }
 Interrupteur >> evaluate [
-    ^self etat asSignal
+    ^self etat 
 
 ]
 
@@ -38,10 +38,10 @@ Interrupteur >> initialize [
 
 { #category : 'changing state' }
 Interrupteur >> off [ 
-	etat := false
+	etat := SignalBas new. 
 ]
 
 { #category : 'changing state' }
 Interrupteur >> on [
-	etat := true
+	etat := SignalHaut new.
 ]

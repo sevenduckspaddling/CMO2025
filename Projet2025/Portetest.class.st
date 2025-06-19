@@ -15,7 +15,7 @@ Portetest >> testandEtat [
 	a in2: i2.
 	i1 on.
 	i2 off.
-	var := a etat.
+	var := a etat value.
 	self assert: var equals: false
 ]
 
@@ -25,7 +25,7 @@ Portetest >> testnotDescription [
 	not1 := Not new.
 	var := not1 description.
 	var2 := not1 id printString.
-	var3 := #'Not ','(', var2,') ', 'in: non connecté'.
+	var3 := #'Not ','(', var2,') ', 'in: non connecte'.
 	self assert: var equals: var3.
 
 	
@@ -36,7 +36,7 @@ Portetest >> testnotEtat [
 	|not1 var|
 	not1 := Not new.
 	not1 in: Interrupteur new on.
-	var := not1 etat.
+	var := not1 etat value.
 	self assert: var equals: false.
 ]
 
@@ -50,7 +50,7 @@ Portetest >> testorState [
 	o in2: i2.
 	i1 off.
 	i2 on.
-	var := o etat.
+	var := o etat value.
 	self assert: var equals: true
 ]
 
@@ -62,7 +62,7 @@ Portetest >> testp2eDescription [
 	var4 := and1 in1 description.
 	var := and1 description.
 	var2 := and1 id printString.
-	var3 := #'And ','(', var2,') ', 'in1: ',var4,' in2: non connecté'.
+	var3 := #'And ','(', var2,') ', 'in1: ',var4,' in2: non connecte'.
 	self assert: var equals: var3.
 
 ]
