@@ -20,9 +20,9 @@ Vannetest >> testvanneDescription [
 Vannetest >> testvanneEtat [
 |van1 var|
 van1 := Vanne new.
-van1 in: Interrupteur new.
+van1 in: Interrupteur new on.
 var := van1 etat.
-self assert: var printString equals: 'an Interrupteur'.
+self assert: var printString equals: 'true'.
 ]
 
 { #category : 'tests' }
@@ -33,6 +33,6 @@ Vannetest >> testvannestate [
 	van1 := Vanne new.
 	van1 in: i1.
 	i1 on. 
-	var := van1 state.
+	var := van1 etat.
 	self assert: var equals: true
 ]

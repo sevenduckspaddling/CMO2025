@@ -3,8 +3,7 @@ Class {
 	#superclass : 'Composant',
 	#instVars : [
 		'in',
-		'etat',
-		'state'
+		'etat'
 	],
 	#category : 'Projet2025',
 	#package : 'Projet2025'
@@ -39,9 +38,4 @@ Vanne >> in [
 { #category : 'accessing' }
 Vanne >> in: aComposant [
 	 in := aComposant
-]
-
-{ #category : 'accessing' }
-Vanne >> state [ 
-	^in state
 ]

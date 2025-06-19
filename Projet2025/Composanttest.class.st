@@ -15,5 +15,5 @@ var1 := and1 etatCheck.
 or1 := Or new.
 or1 in1: Interrupteur new.
 var2 := or1 etatCheck. 
-self assert: var1 printString, var2 equals: 'an Array(an Interrupteur an Interrupteur)','Le composant n est pas connecte.'.
+self assert: var1 printString, var2 equals: 'false','Le composant n est pas connecte.'
 ]

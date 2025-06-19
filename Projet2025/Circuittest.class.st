@@ -52,7 +52,7 @@ Circuittest >> testCircuiti1ONi2ONi3OFF [
 	i1 on.
 	i2 on.
 	i3 off. 
-	var := van state.
+	var := van etat.
 	self assert: var equals: true
 ]
 
@@ -62,7 +62,7 @@ Circuittest >> testCircuiti1ONi2ONi3ON [
 	i1 on.
 	i2 on.
 	i3 on. 
-	var := van state.
+	var := van etat.
 	self assert: var equals: false
 ]
 

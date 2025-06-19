@@ -2,8 +2,7 @@ Class {
 	#name : 'Interrupteur',
 	#superclass : 'Composant',
 	#instVars : [
-		'etat',
-		'state'
+		'etat'
 	],
 	#category : 'Projet2025',
 	#package : 'Projet2025'
@@ -21,33 +20,28 @@ Interrupteur >> estInterrupteur [
 
 { #category : 'accessing' }
 Interrupteur >> etat [ 
-	^self
+	^etat
 ]
 
 { #category : 'evaluating' }
 Interrupteur >> evaluate [
-    ^state asSignal
+    ^self etat asSignal
 
 ]
 
 { #category : 'initialization' }
 Interrupteur >> initialize [
     super initialize.
-    state := false.
+    etat := false.
 
 ]
 
 { #category : 'changing state' }
 Interrupteur >> off [ 
-	state := false
+	etat := false
 ]
 
 { #category : 'changing state' }
 Interrupteur >> on [
-	state := true
-]
-
-{ #category : 'accessing' }
-Interrupteur >> state [ 
-	^state
+	etat := true
 ]
